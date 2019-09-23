@@ -18,6 +18,27 @@ Clicking on the Cascadia.ttf file will download it to your machine. From there, 
 
 👉 **Note:** If you have previously installed a version of Cascadia Code, installing a new version *should* overwrite the previous version. However, in order to ensure it is completely overwritten, it is recommended that you delete the previous version you had before installing another.
 
+
+## ChromeOS
+
+```
+@font-face{
+    font-family: 'Cascadia Code';
+    src: url('https://raw.githubusercontent.com/ClashTheBunny/cascadia-code/add_build_and_distr/distr/eot/CascadiaCode-Regular.eot') format('embedded-opentype'),
+         url('https://raw.githubusercontent.com/ClashTheBunny/cascadia-code/add_build_and_distr/distr/woff2/CascadiaCode-Regular.woff2') format('woff2'),
+         url('https://raw.githubusercontent.com/ClashTheBunny/cascadia-code/add_build_and_distr/distr/woff/CascadiaCode-Regular.woff') format('woff'),
+         url('https://raw.githubusercontent.com/ClashTheBunny/cascadia-code/add_build_and_distr/distr/ttf/CascadiaCode-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: 'Cascadia Code';
+}
+```
 # Contributing
 
 This project welcomes contributions and suggestions. Most contributions require you to
