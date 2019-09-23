@@ -1,0 +1,19 @@
+#! /bin/bash -ex
+
+which pip3 || sudo easy_install pip
+pip3 install virtualenv --user
+python3 -m virtualenv venv
+source venv/bin/activate
+
+# https://github.com/googlefonts/gftools/issues/121
+which pkg-config || brew install pkg-config
+pip3 install -U Pillow==5.4.1 idna==2.8 requests==2.21.0 urllib3==1.24.1
+pip3 install pycairo
+pip3 install git+https://github.com/googlefonts/gftools
+
+pip3 install fontmake
+which ttfautohint || brew install ttfautohint
+which woff2_compress || brew install woff2
+which sfnt2woff-zopfli || brew tap bramstein/webfonttools
+which sfnt2woff-zopfli || brew install sfnt2woff-zopfli
+pip3 install fontbakery
